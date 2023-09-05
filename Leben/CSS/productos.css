@@ -1,0 +1,111 @@
+/*productos info*/
+.product {
+    text-align: center;
+    padding: 0 0 100px 0;
+    background-color: #FFFFFF
+}
+.product h2 {
+    margin-top: 100px;
+}
+.product-content {
+    margin: 0px 0 70px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.conte_parent{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    
+}
+.conte{
+    background-color: #dcdcdc;
+    height: 510px;
+    width: 350px;
+    box-shadow:0 0 7px #111 ;
+    margin: 30px 30px;
+}
+.conte .card{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+.card img{
+    margin: auto;
+    display: block;
+    width: 300px;
+    margin-top: 25px;
+}
+.informacion{
+    height: 80px;
+    width: 100%;
+}
+.informacion h1{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    color: #000;
+    margin-bottom: -10px;
+}
+.informacion p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: .9em;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    margin-right: 20px;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.item{
+    margin: 50px 0 50px 0;
+    border:  2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px #000;
+}
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+.item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+.item figure{
+    overflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+.info-product button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.title {
+	padding: 20px;
+	background-color: #eee;
+	margin-bottom: 50px;
+	color: #222;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Insumos | Leben </title>
+  <link rel="stylesheet" href="insumos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#">Produccion</a>
+      <div class="search_box">
+        <input type="text" placeholder="Buscar tarea">
+        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+
+    <div class="header-icons">
+      <i class="fas fa-bell"></i>
+      <div class="account">
+        <img src="img/leben.jpg" alt="">
+        <h4>Leben</h4>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <nav>
+      <div class="side_navbar">
+        <span>Menu principal</span>
+        <a href="perfil.html">Perfil</a>
+        <a href="uno.html">Tareas en proceso</a>
+        <a href="insumos.html"class="active">Insumos</a>
+
+        <div class="links">
+          <span>Modulos</span>
+          <a href="inventario.html">Inventario</a>
+        </div>
+      </div>
+    </nav>
+    
+     <div class="main-body">
+      <form>
+        <h1>Panel de insumos</h1>
+        <div class="promo_card">
+          <h2>Agregar Insumos</h2>
+          <div class="container-formulario">
+            <div class="user-details">
+              <div class="input-box">
+               <label class="detalles">Nombre de Insumos:</label>
+               <input type="text" placeholder="Añada nombre del insumo" pattern="[a-z]" required>
+              </div>
+             <div class="input-box">
+               <span class="detalles"> <tr>Cantidad de Insumos:</tr></span>
+               <input type="text" placeholder="Añada la cantidad de insumo" required="" pattern="[0-9]">
+             </div>
+             <div class="input-box">
+               <span class="detalles">Proveedor de Insumos:</span>
+               <input type="text" placeholder="Añada el proveedor de insumo" required="" pattern="[a-z]">
+             </div>
+             <button>Enviar</button>
+           </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      
+  
+        <div class="history_lists">
+          <div class="list2">
+            <div class="row">
+              <h4>Cantidad Insumos</h4>
+              <a href="#">Actualizar</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Proveedore</th>
+                  <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Cordones</td>
+                  <td>Proveedor principal </td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Telas</td>
+                  <td>Proveedor principal</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Plantillas</td>
+                  <td>Proveedor principal</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Suelas</td>
+                  <td>Proveedor principal</td>
+                  <td>22</td>
+                </tr> 
+                <tr>
+                  <td>5</td>
+                  <td>Pegamentos</td>
+                  <td>Proveedor principal</td>
+                  <td>22</td>
+                </tr> 
+                <tr>
+                  <td>6</td>
+                  <td>Tinta</td>
+                  <td>Proveedor principal </td>
+                  <td>22</td>
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+  </html>
+  
+    

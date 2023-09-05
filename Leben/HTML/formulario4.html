@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+  <div class="container">
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <a href="inventario.html" class="logo"><img src="img/leben.jpg" alt=""></a>
+            <h2>Inventario</h2>
+          </li>
+          <li>
+            <a href="inventario.html" class="nav-item">Inicio</a>
+          <li> 
+          <li>
+            <a href="formulario.html" class="nav-item">Registro</a>
+          <li>
+          <li>
+            <a href="formulario2.html" class="nav-item">Crear Categoria</a>
+          <li>
+            <li>
+            <a href="formulario3.html" class="nav-item">Añadir Productos</a>
+          <li>
+          <li>
+            <a href="formulario4.html" class="nav-item">Inhabilitar producto</a>
+          <li>      
+          <li>
+            <a href="perfil.html" class="nav-item">Produccion</a>
+          </li> 
+        </ul>
+      </nav>
+    </section>
+    <section class="main">
+      <div class="formulario">
+        <h2>Inhbilitar producto</h2>
+        <form>
+          <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" required>
+              <option value="">Seleccione una categoría</option>
+              <option value="electronica">Zapatos</option>
+              <option value="ropa">Pantalones</option>
+              <option value="alimentos">Camisas</option>
+              <option value="herramientas">Maletas</option>
+              <option value="hogar">Canguros</option>
+              <option value="juguetes">Medias</option>
+            </select>
+          </div>
+          <label for="producto">Producto:</label>
+          <input type="text" id="producto" placeholder="Ingrese el nombre del producto" required>       
+          <label for="observacion">Observación:</label>
+          <textarea id="observacion" placeholder="Ingrese una observación" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
