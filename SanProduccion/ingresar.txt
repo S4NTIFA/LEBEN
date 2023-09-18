@@ -1,0 +1,216 @@
+<?php
+// Conectar a la base de datos (ajusta los detalles de la conexión según tu configuración)
+$servername = "localhost";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "snb";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);
+}
+
+// Verificar si se envió el formulario de edición
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $idInsumos = $_POST["idInsumos"];
+    $cantidad = $_POST["cantidad"];
+    $tipo = $_POST["tipo"];
+    $fecha = $_POST["fecha"];
+
+    // Actualizar el registro en la base de datos
+    $sql = "UPDATE insumos SET cantidadInsumos = $cantidad, tipoInsumos = '$tipo', fechaInsumos = '$fecha' WHERE idInsumos = $idInsumos";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Cambios guardados con éxito.";
+    } else {
+        echo "Error al guardar los cambios: " . $conn->error;
+    }
+}
+
+// Recuperar el ID del insumo de la URL
+if (isset($_GET["idInsumos"])) {
+    $idInsumos = $_GET["idInsumos"];
+
+    // Consulta la base de datos para obtener los datos del insumo con el ID proporcionado
+    $sql = "SELECT * FROM insumos WHERE idInsumos = $idInsumos";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $cantidad = $row["cantidadInsumos"];
+        $tipo = $row["tipoInsumos"];
+        $fecha = $row["fechaInsumos"];
+    } else {
+        echo "No se encontró el registro.";
+        exit;
+    }
+}
+
+// Cerrar la conexión a la base de datos
+$conn->close();
+?>
+
+$sqlEntrada = "INSERT INTO entrada (cantidadEntrada, fechaEntrada, idProducto)   VALUES ('$cantidadEntrada', '$fechaEntrada', NULL)";
+
+$sqlProducto = "INSERT INTO producto (nombreProducto, cantidadProducto, idCategoria, idTallas, idProveedor)   VALUES ('$nombreProducto', 0, $idCategoria, $idTalla, $idProveedor)";
+
+$sqlActualizarEntrada = "UPDATE entrada SET idProducto = $idProducto WHERE idEntrada = $idEntrada";
+
+$sqlSalida = "INSERT INTO salida (tipoSalida, fechaSalida, idProducto, cantidadSalida) VALUES ('Salida', '$fechaSalida', $idProducto, $cantidadSalida)";
+             
+
+
+<?php
+// Reemplaza con tus credenciales y detalles de conexión a la base de datos
+$host = "localhost";
+$usuario = "tu_usuario";
+$contrasena = "tu_contraseña";
+$base_de_datos = "tu_base_de_datos";
+
+// Conectar a la base de datos
+$conexion = new mysqli($host, $usuario, $contrasena, $base_de_datos);
+
+// Verificar la conexión
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
+
+// Obtener datos del formulario
+$nombreProducto = $_POST['nombreProducto'];
+$cantidadEntrada = $_POST['cantidadEntrada'];
+$fechaEntrada = $_POST['fechaEntrada'];
+$idCategoria = $_POST['idCategoria']; // Supongamos que esto es el ID de la categoría seleccionada
+$idTalla = $_POST['idTalla']; // Supongamos que esto es el ID de la talla seleccionada
+$idProveedor = $_POST['idProveedor']; // Supongamos que esto es el ID del proveedor seleccionado
+$cantidadSalida = $_POST['cantidadSalida'];
+$fechaSalida = $_POST['fechaSalida'];
+
+// Insertar en la tabla 'entrada'
+$sqlEntrada = "INSERT INTO entrada (cantidadEntrada, fechaEntrada, idProducto)
+              VALUES ('$cantidadEntrada', '$fechaEntrada', NULL)";
+
+if ($conexion->query($sqlEntrada) === FALSE) {
+    echo "Error al insertar en la tabla 'entrada': " . $conexion->error;
+}
+
+// Obtener el ID de la entrada recién insertada
+$idEntrada = $conexion->insert_id;
+
+// Insertar en la tabla 'producto'
+$sqlProducto = "INSERT INTO producto (nombreProducto, cantidadProducto, idCategoria, idTallas, idProveedor)
+               VALUES ('$nombreProducto', 0, $idCategoria, $idTalla, $idProveedor)";
+
+if ($conexion->query($sqlProducto) === FALSE) {
+    echo "Error al insertar en la tabla 'producto': " . $conexion->error;
+}
+
+// Obtener el ID del producto recién insertado
+$idProducto = $conexion->insert_id;
+
+// Actualizar el campo 'idProducto' en la entrada con el ID del producto recién insertado
+$sqlActualizarEntrada = "UPDATE entrada SET idProducto = $idProducto WHERE idEntrada = $idEntrada";
+
+if ($conexion->query($sqlActualizarEntrada) === FALSE) {
+    echo "Error al actualizar la tabla 'entrada': " . $conexion->error;
+}
+
+// Insertar en la tabla 'salida'
+$sqlSalida = "INSERT INTO salida (tipoSalida, fechaSalida, idProducto, cantidadSalida)
+             VALUES ('Salida', '$fechaSalida', $idProducto, $cantidadSalida)";
+
+if ($conexion->query($sqlSalida) === FALSE) {
+    echo "Error al insertar en la tabla 'salida': " . $conexion->error;
+}
+
+// Cerrar la conexión a la base de datos
+$conexion->close();
+
+// Redireccionar a la página de éxito o mostrar un mensaje de éxito
+echo "Producto registrado con éxito.";
+?>
+
+
+
+
+
+<form action="" method="POST">
+          <div class="form-group">
+            <label for="tipProducto">Tipo Producto:</label>
+            <select id="tipProducto" required>
+              <?php
+
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $dbname = "snb";
+
+              $conn = new mysqli($servername, $username, $password, $dbname);
+              if ($conn->connect_error) {
+                die("La conexión falló: " . $conn->connect_error);
+              }
+
+              $sql = "SELECT DISTINCT nombreProducto FROM producto";
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                  echo "<option value=''>Seleccione Productos</option>";
+                  echo "<option value='" . $row["nombreProducto"] . "'>" . $row["nombreProducto"] . "</option>";
+                }
+              } else {
+                echo "<option value=''>No hay productos disponibles</option>";
+              }
+
+              $conn->close();
+              ?>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tipInsumos">Tipo Insumos:</label>
+            <select id="tipInsumos" placeholder="Seleccione los Insumos" required>
+              <?php
+
+              $servername = "localhost";
+              $username = "root";
+              $password = "";
+              $dbname = "snb";
+
+              $conn = new mysqli($servername, $username, $password, $dbname);
+              if ($conn->connect_error) {
+                die("La conexión falló: " . $conn->connect_error);
+              }
+
+              $sql = "SELECT DISTINCT tipoInsumos FROM insumos";
+              $result = $conn->query($sql);
+
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                  echo "<option value='" . $row["tipoInsumos"] . "'>" . $row["tipoInsumos"] . "</option>";
+                }
+              } else {
+                echo "<option value=''>No hay tipos de insumos disponibles</option>";
+              }
+
+              $conn->close();
+              ?>
+
+            </select>
+          </div>
+
+          <div class="campos-linea">
+            <label for="nombre">Nombre de la Produccion:</label>
+            <input type="text" id="Nombre" placeholder="Ingrese el nombre de la produccion " required>
+          </div>
+          <div class="campos-linea">
+            <label for="cantidad">Cantidad solicitada:</label>
+            <input type="number" id="cantidad" placeholder="Ingrese la cantidad" required>
+          </div>
+
+          <div class="campos-linea">
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="fechaInicio" required>
+          </div>
+          <button type="submit">Guardar</button>
+        </form>
