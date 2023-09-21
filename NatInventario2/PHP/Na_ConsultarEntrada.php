@@ -69,18 +69,11 @@
             <tr>
 <?php
 // Conexión a la base de datos
-$servername = "tu_servidor";
-$username = "tu_usuario";
-$password = "tu_contraseña";
-$database = "tu_base_de_datos";
+require("../conexion.php");
 
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
-}
-
+                try {
+                  $pdo = new PDO("mysql:host=127.0.0.1;dbname=snb", "root", "");
+                  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 // Consulta SQL para obtener los datos
 $sql = "SELECT   ca.nombreCategoria,
                  ta.numeroTallas,
@@ -92,40 +85,32 @@ $sql = "SELECT   ca.nombreCategoria,
                 INNER JOIN tallas ta ON pr.idTallas = ca.idTallas
                 INNER JOIN producto pr ON pr.idProducto = pr.idProducto
                 INNER JOIN entrada en ON en.idEntrada = en.idEntrada";
-$result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // Imprimir los resultados en una tabla
-    echo "<table>
-            <tr>
-                <th>ID</th>
-                <th>Categoría</th>
-                <th>Talla</th>
-                <th>Nombre del Producto</th>
-                <th>Cantidad</th>
-                <th>Fecha</th>
-            </tr>";
+$stmt = $pdo->query($consulta);
 
-    while ($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>" . $row["idProducto"] . "</td>
-                <td>" . $row["nombreCategoria"] . "</td>
-                <td>" . $row["numeroTalla"] . "</td>
-                <td>" . $row["nombreProducto"] . "</td>
-                <td>" . $row["cantidadEntrada"] . "</td>
-                <td>" . $row["fechaEntrada"] . "</td>
-              </tr>";
-    }
+                  while ($fila = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    
+                    $idProducto = $fila['idProducto'];
+                    $nombreCategoria = $fila['nombreCategoria'];
+                    $numeroTallas = $fila['numeroTallas'];
+                    $nombreProducto = $fila['nombreProducto'];
+                    $cantidaEntrada = $fila['cantidadEntrada'];
+                    $fechaEntrada = $fila['fechaEntrada'];
+                    
 
-    echo "</table>";
-} else {
-    echo "No se encontraron registros.";
-}
+                    echo "<tr>";
+                    echo "<td>$idProducto</td>";
+                    echo "<td>$nombreCategoria</td>";
+                    echo "<td>$numeroTallas</td>";
+                    echo "<td>$nombreProducto</td>";
+                    echo "<td>$cantidadEntrada</td>";
+                    echo "<td>$fechaEntrada</td>";           
+
+
 
 // Cerrar la conexión
 $conn->close();
 ?>
-
 
             
               <button class="edit-btn"><i class="fas fa-edit"></i></button>
