@@ -1,0 +1,486 @@
+/* Aquí va el código CSS */
+    /* Importar Google Fonts */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+
+    * {
+      margin: 0;
+      padding: 0;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-image: linear-gradient(rgba(0,0,0,0.422),rgba(0,0,0,0.445)),
+      url(/IMG/pexels-josh-hild-2422264.jpg);
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    nav {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      height: 150vh;
+      left: 0;
+      background: #ffffff;
+      width: 280px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      text-align: center;
+      display: flex;
+      margin: 10px 0 0 10px;
+    }
+
+    .logo img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    .logo span {
+      font-weight: bold;
+      padding-left: 15px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    a {
+      position: relative;
+      color: rgb(0, 0, 0);
+      font-size: 14px;
+      display: table;
+      width: 280px;
+      padding: 10px;
+    }
+
+    nav .fas {
+      position: relative;
+      width: 70px;
+      height: 40px;
+      top: 14px;
+      font-size: 20px;
+      text-align: center;
+    }
+    .nav-item:hover {
+      background: #df6c00;
+    }
+
+    .logout {
+      position: absolute;
+      bottom: 0;
+    }
+
+    /* Main Section */
+    .main {
+      position: relative;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .main-top {
+      display: flex;
+      width: 100%;
+    }
+
+    .main-top i {
+      position: absolute;
+      right: 0;
+      margin: 10px 30px;
+      color: rgb(110, 109, 109);
+      cursor: pointer;
+    }
+
+    .main-skills {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .main-skills .card {
+      width: 25%;
+      margin: 10px;
+      background: #700a0a;
+      text-align: center;
+      border-radius: 20px;
+      padding: 10px;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-skills .card h3 {
+      margin: 10px;
+      text-transform: capitalize;
+    }
+
+    .main-skills .card p {
+      font-size: 12px;
+    }
+
+    .main-skills .card button {
+      background: rgb(255, 105, 51);
+      color: #fff;
+      padding: 7px 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .main-skills .card button:hover {
+      background: #000000(223, 70, 15, 0.856);
+    }
+
+    .main-skills .card i {
+      font-size: 22px;
+      padding: 10px;
+    }
+
+    /* Courses */
+    .main-course {
+      margin-top: 20px;
+      text-transform: capitalize;
+    }
+
+    .course-box {
+      width: 100%;
+      height: 300px;
+      padding: 10px 10px 30px 10px;
+      margin-top: 10px;
+      background: #b90c0c;
+      border-radius: 10px;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-box ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .course-box ul li {
+      margin: 10px;
+      color: rgb(35, 42, 139);
+      cursor: pointer;
+    }
+
+    .course-box ul .active {
+      color: #000;
+      border-bottom: 1px solid #000;
+    }
+
+    .course-box .course {
+      display: flex;
+    }
+
+    .box {
+      width: 33%;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      background: rgb(199, 24, 24);
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .box p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .box button {
+      background: #000;
+      color: #b60000;
+      padding: 7px 10px;
+      border-radius: 10px;
+      margin-top: 3rem;
+      cursor: pointer;
+    }
+
+    .box button:hover {
+      background: rgba(0, 0, 0, 0.842);
+    }
+
+    .box i {
+      font-size: 7rem;
+      float: right;
+      margin: -20px 20px 20px 0;
+    }
+    .css {
+      color: rgb(104, 179, 35);
+    }
+
+    .js {
+      color: rgb(20, 18, 163);
+
+/*Attendance List serction  */
+
+  }
+    .table{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 15px;
+        min-width: 100%;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+      }
+      table thead tr{
+        color: #f0f0f0;
+        background: rgba(255, 153, 0, 0.6);
+        text-align: left;
+        font-weight: bold;
+      }
+      .table th,
+      .table td{
+        padding: 12px 15px;
+      }
+      .table tbody tr{
+        border-bottom: 1px solid #a8a8a8;
+      }
+      .table tbody tr:nth-of-type(odd){
+        background: #f3f3f3;
+      }
+      
+      
+      .table tbody tr:last-of-type{
+        border-bottom: 2px solid #ff6600;
+      }
+      .table button{
+        padding: 6px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #fa6400;
+      }
+
+
+      .table2{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 15px;
+        min-width: 100%;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+      }
+      .table2 thead tr{
+        color: #fff;
+        background: rgba(255, 153, 0, 0.6);
+        text-align: left;
+        font-weight: bold;
+      }
+      .table2 th,
+      .table2 td{
+        padding: 12px 15px;
+      }
+      .table2 tbody tr{
+        border-bottom: 1px solid #a8a8a8;
+      }
+      .table2 tbody tr:nth-of-type(odd){
+        background: #f3f3f3;
+      }
+      
+      
+      .table2 tbody tr:last-of-type{
+        border-bottom: 2px solid #ff6600;
+      }
+      .table2 button{
+        padding: 6px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #fa6400;
+      }
+
+/*formulario crear categoria*/
+
+  /* Estilos del contenedor del formulario */
+  .formulario {
+    width: 700px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+  }
+  
+  /* Estilos de los campos del formulario */
+  .formulario label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .formulario input[type="text"],
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #9c9c9c;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos del botón de guardar */
+  .formulario button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .formulario button:hover {
+    background-color: #555555; 
+  }
+
+  .form-group {
+  width: 500px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	width: 100px;
+	color: #000;
+	font-size: 16px;
+}
+
+.form-group select {
+    margin-top: 10px;
+	width: 300px;
+	border: none;
+	padding: 12px 15px;
+	background-color: #f7f7f7;
+	outline: none;
+	color: #666;
+}
+
+body {
+  background-image: url('imagen-de-fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contenido {
+  /* Estilos para el contenido */
+  width:0;
+}
+
+/* Estilos para la marca de agua */
+.marca-agua {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1.0; /* Ajusta la opacidad según tu preferencia */
+  z-index: -1; /* Coloca la marca de agua detrás del contenido */
+  width: 1350px; /* Ajusta el ancho de la imagen de marca de agua */
+  height : 700px ;
+}
+
+/* Estilos personalizados aquí si es necesario */
+.avatar {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+/* Estilos para el diseño de la página */
+.perfil {
+  margin-left: 25%; /* Deja espacio a la izquierda del perfil para el menú */
+  padding: 20px;
+  text-align: center;
+}
+
+.marca-agua {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.5;
+}
+
+.productop{
+  width: 300px ;
+}
+
+.campos-linea {
+  width: 200px ;
+  display: inline-block;
+  align-items: baseline;
+  margin-right: 120px;
+}
+/* Agrega un estilo para el menú */
+.nav-item {
+  position: relative;
+  top: 12px;
+  margin-left: 0px;
+}
+
+/* Elimina el margen izquierdo del contenedor ul */
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Elimina los puntos de lista del menú */
+ul.nav {
+  list-style-type: none;
+}
+
+/* Estilo para los elementos del menú */
+ul.nav li {
+  display: inline;
+  margin-right: 10px; /* Espacio entre elementos del menú */
+}
+
+
+/* Estilos para las tablas */
+.table-container {
+  width: 90%;
+  max-height: 600px; /* Establece la altura máxima deseada */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+}
+/* Estilo para los botones */
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+  color: #ff9900;
+}
+
+/* Estilos para ajustar las tablas con la barra de navegación */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th, .table-container td {
+  text-align: left;
+  padding: 8px;
+}
+
+.table-container thead {
+  background-color: #f2f2f2;
+}

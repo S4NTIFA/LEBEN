@@ -1,0 +1,103 @@
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login {
+  margin: 0 auto;
+  display: grid;
+}
+
+label {
+  color: #D67E02;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.controls {
+  width: 100%;
+  border: 1px solid #D67E02;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding: 11px 10px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-2 {
+  margin-top: 25px;
+  margin-left: 125px;
+  margin-bottom: 10px;
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #D67E02;
+  border: none;
+}
+
+h6 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  
+}
+
+p{
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+}
+.warnings { 
+  color: #D67E02;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/*login */
+.form-login {
+  padding: 50px 55px;
+  box-shadow: 0 0 20px #000000;
+  border-radius: 20px;
+  width: 540px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/*registro */
+.form-register {
+  padding: 50px 55px;
+  box-shadow: 0 0 20px #000000;
+  border-radius: 20px;
+  width: 540px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+/*recuperar contraseña*/
+.form-contraseña{
+  padding: 50px 55px;
+  box-shadow: 0 0 20px #000000;
+  border-radius: 20px;
+  width: 540px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}

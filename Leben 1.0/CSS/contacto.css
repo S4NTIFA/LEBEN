@@ -1,0 +1,85 @@
+/*titulo */
+.cont-emca {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/*formulario */
+.contacto {
+    margin: 0 auto;
+    display: grid;
+}
+.form-contacto {
+    padding: 50px 55px;
+    box-shadow: 0 0 20px #000000;
+    border-radius: 20px;
+    width: 540px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.form-contacto label {
+    color: #D67E02;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.form-contacto .controls{
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.form-txt a {
+    color: #D67E02;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btn-2 {
+    margin-left: 150px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #D67E02;
+    border: none;
+}
+p{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+/*mapa, información */
+.maps {
+
+    text-align: center;
+    padding: 0 0 100px 0;
+    background-color: #FFFFFF
+}
+.mapa {
+    border: solid 2px #000;
+    border-radius: 5px;
+}
+.info-map h3 {
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}

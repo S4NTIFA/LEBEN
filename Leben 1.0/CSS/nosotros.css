@@ -1,0 +1,120 @@
+/*info */
+.about {
+    padding: 100px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.about-img {
+    width: 50%;
+    text-align: center;
+}
+.about-img img {
+    height: 400px;
+    width: 450px;
+}
+.about-text {
+    width: 50%;
+}
+
+/*misión-visión */
+.info {
+    max-width: 1100;
+    margin: 0 auto;
+}
+.desp-info {
+    text-align: center;
+    margin: 100px 150px 5px 150px;
+}
+.info-img {
+    align-items: center;
+}
+.info-img img {
+    width: 1200px;
+}
+.mision{
+    margin: 50px 0 70px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.mision-conte {
+    margin-top: 50px;
+    margin-right: 80px;
+}
+.mision-conte  h2{
+    text-align: center;
+}
+.vision{
+    margin: 50px 0 70px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.vision-conte {
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+/*team leben*/
+.team-emca {
+    text-align: center;
+    margin-top: 100px;
+}
+.team {
+    padding: 0 0 100px 0;
+}
+.team-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap:30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: 1s;
+    margin-bottom: 50px;
+}
+.team-conte:hover{
+    box-shadow: 0 0 10px #666;
+    scale: 1.10;
+}
+.conte_parent{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-wrap:wrap;
+    
+}
+.team-conte{
+    background-color: #FFFFFF;
+    height: 600px;
+    width: 350px;
+    box-shadow:0 0 7px #111 ;
+    margin: 30px 30px;
+    
+}
+.team-conte h3 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+.team-img{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+.team-img img{
+    margin: auto;
+    display: block;
+    width: 300px;
+    margin-top: 25px;
+}
+.team-desp {
+    height: 80px;
+    width: 100%;
+}
+.team-desp p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #858585;
+    margin: 10px 20px 20px 20px;
+}
