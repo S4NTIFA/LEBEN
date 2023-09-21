@@ -90,7 +90,7 @@
                         </div>
                         <div class="productop">
                             <label for="cantidadSalida">Cantidad salido:</label>
-                            <input type="number" id="cantidadSalida" name="cantidadSalida" placeholder="Ingrese la cantidad de salida" required>
+                            <input type="number" id="cantidadSalida" name="cantidadSalida" placeholder="Ingrese la cantidad de salida" oninput="validarCantidad(this)" min="1"></div>
                         </div>
                         <div class="campos-linea">
                             <label for="fechaSalida">Fecha de Salida:</label>
