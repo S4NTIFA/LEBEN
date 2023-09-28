@@ -1,4 +1,4 @@
-<?php
+<?php     
 
 if (isset($_POST['idProducto'])) {
     $idProducto = $_POST['idProducto'];
